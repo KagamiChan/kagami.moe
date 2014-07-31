@@ -64,21 +64,6 @@ nav ul li{
     float: left;
 }
 
-li.pr a{
-    background-position-x:0px;
-}
-
-li.act a{
-    background-position-x:-180px;
-}
-
-li.contact a{
-    background-position-x:-360px;
-}
-
-li.blog a{
-    background-position-x:-540px;
-}
 
 nav ul li a{
     display: block;
@@ -86,6 +71,38 @@ nav ul li a{
     background-image: url("./assets/nav.png");
     width: 180px;
     transition:none;
+}
+
+li.pr a{
+    background-position:0px 0px;
+}
+
+li.pr a:hover{
+    background-position:0px 47px;
+}
+
+li.act a{
+    background-position:-180px 0px;
+}
+
+li.act a:hover{
+    background-position: -180px 47px;
+}
+
+li.contact a{
+    background-position:-360px 0px;
+}
+
+li.contact a:hover{
+    background-position: -360px 47px;
+}
+
+li.blog a{
+    background-position:-540px 0px;
+}
+
+li.blog a:hover{
+    background-position: -540px 47px;
 }
 
 nav ul li a:hover{
@@ -192,5 +209,6 @@ project{
 i{
     width: 1em;
     text-align: center;
+    height: 1.6em;
     display: inline-block;
 }
