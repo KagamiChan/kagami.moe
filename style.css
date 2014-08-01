@@ -48,6 +48,7 @@ h1{
     overflow: hidden;
     width: 340px;
     height: 100px;
+    margin: 40px 0px 120px 0px;
     background: url("./assets/h1.png");
 }
 
