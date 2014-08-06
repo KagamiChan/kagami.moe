@@ -14,7 +14,7 @@ body{
     padding: 0px;
     margin:0px;
     line-height: 160%;
-    font-family: 'Open Sans' sans-serif;
+    font-family: 'Open Sans','Source Han Sans CN', 'Hiragino Sans GB', 'Microsoft Yahei', 'Wenquanyi Microhei', sans-serif;
     font-size: 16px;
     color: #555;
 }
@@ -46,88 +46,102 @@ h1{
     display: block;
     text-indent: -999px;
     overflow: hidden;
-    width: 340px;
-    height: 100px;
-    margin: 40px 0px 120px 0px;
-    background: url("./assets/h1.png");
+    width: 100%;
+    height: 200px;
+    margin: 40px 0px 0px 0px;
+    background-image: url("./assets/h1_gekkan.png");
+    background-repeat: no-repeat;
 }
+
+/*h1:hover{
+    background-image: url("./assets/h1_gekkan.png");
+}*/
 
 nav{
     display: block;
-    height: 55px;
+    height: 70px;
     width: 100%;
     border-bottom-style: solid;
     border-bottom-color: #ccc;
-    border-bottom-width: 0px; 
-    background-color: #fff;
+    border-bottom-width: 0px;
+    background-color: #fff; 
+    font-size: 200%;
+    line-height: 200%;
+    font-weight: 700;
 }
 
-nav ul{
-    height: 45px;
-    width: 740px;
-    margin-left: 6px;
+/*nav.is_stuck{
+    background-image: url("./assets/h1_gekkan.png");
+    background-repeat: no-repeat;
+    background-position: center right;
 }
+*/
 
 nav ul li{
     list-style: none;
     display: block;
     margin: 0px;
     padding: 0px;
-    height: 45px;
+    height: 60px;
     float: left;
 }
 
 
 nav ul li a{
     display: block;
-    height: 45px;
-    background-image: url("./assets/nav.png");
-    width: 180px;
-    transition:none;
-}
-
-li.pr a{
-    background-position:0px 0px;
-}
-
-li.pr a:hover{
-    background-position:0px 47px;
-}
-
-li.act a{
-    background-position:-180px 0px;
-}
-
-li.act a:hover{
-    background-position: -180px 47px;
-}
-
-li.contact a{
-    background-position:-360px 0px;
-}
-
-li.contact a:hover{
-    background-position: -360px 47px;
-}
-
-li.blog a{
-    background-position:-540px 0px;
-}
-
-li.blog a:hover{
-    background-position: -540px 47px;
+    width: 5em;
 }
 
 nav ul li a:hover{
-    background-position-y: 47px;
-    transition:none;
-    opacity: 0.75;
+    color: #555;
+    opacity: 0.6;
 }
+
+li.pr a:hover::first-letter{
+    color: #00aeef;
+}
+
+li.act a:hover::first-letter{
+    color: #f68e56;
+}
+
+li.contact a:hover::first-letter{
+    color: #8dc63f;
+}
+
+
+li.blog a:hover::first-letter{
+    color: #f06eaa;
+}
+
+li.blog a:hover:after{
+    content: "\f14c";
+    font-family: 'FontAwesome';
+    vertical-align: top;
+    font-size: 60%;
+    padding-left: 0.25ex;
+    font-weight: 400;
+}
+
+/*A hack for Firefox Aurora 32*/
+li.pr a:hover:after{
+    content: "";
+}
+
+li.act a:hover:after{
+    content: "";
+}
+
+li.contact a:hover:after{
+    content: "";
+}
+
+/*hack end*/
 
 h2{
     text-indent: -999px;
     overflow: hidden;
-    height: 60px;
+    height: 70px;
     display: block;
     width: 100%;
 }
@@ -225,3 +239,101 @@ i{
     height: 1.6em;
     display: inline-block;
 }
+
+/*Responsive part*/
+
+@media screen and (max-width: 740px){
+    
+    wrapper{
+        width: 90%;
+    }
+
+    h1{
+        background-size: contain;
+        margin:  5% 0 0 0;
+        height: 80px;
+    }
+
+    nav{
+        font-size: 240%;
+        line-height: auto;
+    }
+
+    nav ul li{
+        height: 70px;
+    }
+
+    nav ul li a{
+        overflow: hidden;
+        width: 1.5em;
+        height: 2em;
+    }
+
+    nav ul li a:before{
+        padding-right: 999em;
+        display: inline-block;
+        font-family: 'FontAwesome';   
+    }
+
+    .pr a:before{
+        content: "\f007";
+        font-family: 'FontAwesome';
+    }
+
+    .pr a:hover{
+        color: #00aeef;
+    }
+
+    .act a:before{
+        content: "\f135";
+    }
+
+    .act a:hover{
+        color: #f68e56;
+    }
+
+    .contact a:before{
+        content: "\f198";
+    }
+
+    .contact a:hover{
+        color: #8dc63f;
+    }
+
+    .blog a:before{
+        content: "\f19a";
+    }
+
+    .blog a:hover{
+        color: #f06eaa;
+    }
+
+    pr{
+        font-size: 100%;
+    }
+
+    dt{
+        width: auto;
+        float: none;
+    }
+
+    dd{
+        width: auto;
+        float: none;
+        padding-left: 10%; 
+    }
+
+    node a{
+        width: 100%;
+        height: auto;
+    }
+
+    network{
+        height: auto;
+    }
+
+    copyright{
+        float: left;
+    }
+}
+
