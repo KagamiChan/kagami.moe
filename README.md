@@ -1,3 +1,5 @@
+![logo](https://raw.githubusercontent.com/KagamiChan/kagami.moe/gh-pages/assets/h1_gekkan.png)
+
 kagami.moe
 ==========
 
