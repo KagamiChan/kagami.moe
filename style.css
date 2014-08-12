@@ -235,8 +235,23 @@ project{
 
 network{
     display: block;
-    height: 300px;
+    height: auto;
 }
+
+network:after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+node{
+    display: block;
+}
+
+node:last-child{
+    margin-bottom: 3em;
+}
+
 
 node a{
     display: block;
